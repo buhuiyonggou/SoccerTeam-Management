@@ -86,10 +86,9 @@ public class TeamDisplayImpl extends JFrame implements TeamDisplay {
     addButton = new JButton("Add");
     cancelButton = new JButton("Cancel");
 
-    // create input panel
+    // create input panel and add buttons and fields to the inputPanel
     JPanel inputPanel = new JPanel(new GridLayout(5, 3));
 
-    //adding buttons and fields to the inputPanel
     inputPanel.add(firstNameLabel);
     inputPanel.add(firstNameField);
     inputPanel.add(addButton);
@@ -128,7 +127,6 @@ public class TeamDisplayImpl extends JFrame implements TeamDisplay {
     teamInfoArea.setWrapStyleWord(true);
 
     // create another panel to display team information
-    // add label and info area to the teamLayoutPanel
     JPanel teamLayoutPanel = new JPanel(new BorderLayout());
     teamLayoutPanel.add(teamInfoArea, BorderLayout.CENTER);
 
@@ -139,13 +137,13 @@ public class TeamDisplayImpl extends JFrame implements TeamDisplay {
 
     // create displayPanel at the top
     JPanel displayTeamPanel = new JPanel(new BorderLayout());
-    JPanel displayTeamButtonsPanel = new JPanel(new GridLayout(1, 4));
     displayTeamPanel.add(teamLayoutPanel);
     teamDisplayLabel = new JLabel("You haven't created a team yet");
     teamLayoutPanel.add(teamDisplayLabel, BorderLayout.NORTH);
     teamDisplayLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
-    // Set up action listeners for Display_Team, Display_LineUp, and Back buttons in displayPanel
+    // create buttons display panel and add buttons in
+    JPanel displayTeamButtonsPanel = new JPanel(new GridLayout(1, 4));
     displayTeamButtonsPanel.add(createTeamButton);
     displayTeamPanel.add(displayTeamButtonsPanel, BorderLayout.SOUTH);
     displayTeamButtonsPanel.add(displayTeamButton);
