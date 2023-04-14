@@ -1,0 +1,45 @@
+    m.addPlayer("Astuka", "Soryu",
+        LocalDate.of(2014, 12, 4), Position.FORWARD, 3);
+    m.addPlayer("Amber", "UB-001",
+        LocalDate.of(2015, 8, 31), Position.GOALIE, 4);
+    m.addPlayer("Black", "BK-201",
+        LocalDate.of(2016, 12, 31), Position.GOALIE, 5);
+    m.addPlayer("Fay", "Valentine",
+        LocalDate.of(2014, 8, 14), Position.MIDFIELDER, 4);
+    m.addPlayer("Kumiko", "Oumae",
+        LocalDate.of(2013, 8, 21), Position.MIDFIELDER, 4);
+    m.addPlayer("Reina", "Kousaka",
+        LocalDate.of(2013, 5, 15), Position.FORWARD, 2);
+    m.addPlayer("Houtarou", "Oreki",
+        LocalDate.of(2016, 4, 28), Position.DEFENDER, 3);
+    m.addPlayer("Makima", "Dominate",
+        LocalDate.of(2017, 2, 10), Position.DEFENDER, 2);
+    m.addPlayer("Tatsuki", "Fujimoto",
+        LocalDate.of(2013, 10, 10), Position.DEFENDER, 2);
+    m.addPlayer("Akiyuki", "Shibo",
+        LocalDate.of(2013, 9, 27), Position.FORWARD, 5);
+    m.addPlayer("Chisato", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 1);
+
+    m.addPlayer("Chisato1", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 1);
+    m.addPlayer("Chisato2", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 1);
+    m.addPlayer("Chisato3", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 4);
+    m.addPlayer("Chisato4", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 3);
+    m.addPlayer("Chisato5", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 2);
+    m.addPlayer("Chisato6", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 5);
+    m.addPlayer("Chisato7", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 1);
+    m.addPlayer("Chisato8", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 3);
+    m.addPlayer("Chisato9", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 4);
+    m.addPlayer("Chisato10", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.DEFENDER, 1);
+    m.addPlayer("Chisato11", "Nishikigi",
+        LocalDate.of(2016, 9, 23), Position.FORWARD, 4);
