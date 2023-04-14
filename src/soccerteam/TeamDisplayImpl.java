@@ -25,13 +25,20 @@ import javax.swing.SwingConstants;
  * interact with the system, manage teams, and display team information.
  */
 public class TeamDisplayImpl extends JFrame implements TeamDisplay {
-  private final JButton addButton, cancelButton, createTeamButton,
-      displayTeamButton, displayLineUpButton, displayBenchButton;
-  private final JLabel teamDisplayLabel, displayPlayersLabel;
+  private final JLabel teamDisplayLabel;
+  private final JLabel displayPlayersLabel;
   private final JButton exitButton;
   private final JPanel mainPanel;
+  private final JButton addButton;
+  private final JButton cancelButton;
+  private final JButton createTeamButton;
+  private final JButton displayTeamButton;
+  private final JButton displayLineUpButton;
+  private final JButton displayBenchButton;
   private final JTextArea teamInfoArea;
-  private final JTextField firstNameField, lastNameField, dateOfBirthField;
+  private final JTextField firstNameField;
+  private final JTextField lastNameField;
+  private final JTextField dateOfBirthField;
   private final JComboBox<Position> preferredPositionCombo;
   private final JComboBox<String> skillLevelCombo;
 
@@ -55,15 +62,14 @@ public class TeamDisplayImpl extends JFrame implements TeamDisplay {
 
     // create label for fields and make them center, reminding what should input
     JLabel firstNameLabel = new JLabel("First Name:");
-    JLabel lastNameLabel = new JLabel("Last Name:");
-    JLabel dateOfBirthLabel = new JLabel("Date of Birth:");
-    JLabel preferredPositionLabel = new JLabel("Preferred Position:");
-    JLabel skillLevelLabel = new JLabel("Skill Level:");
-
     firstNameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    JLabel lastNameLabel = new JLabel("Last Name:");
     lastNameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    JLabel dateOfBirthLabel = new JLabel("Date of Birth:");
     dateOfBirthLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    JLabel preferredPositionLabel = new JLabel("Preferred Position:");
     preferredPositionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    JLabel skillLevelLabel = new JLabel("Skill Level:");
     skillLevelLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
     // Create fields and buttons to display information
@@ -115,40 +121,36 @@ public class TeamDisplayImpl extends JFrame implements TeamDisplay {
     addPlayerPanel.add(inputPanel, BorderLayout.CENTER);
     addPlayerPanel.add(addPlayerButtonsPanel, BorderLayout.SOUTH);
 
-    // create displayPanel at the top
-    JPanel displayTeamPanel = new JPanel(new BorderLayout());
-    JPanel displayTeamButtonsPanel = new JPanel(new GridLayout(1, 4));
-
-    // create another panel to display team information
-    JPanel teamLayoutPanel = new JPanel(new BorderLayout());
-    teamDisplayLabel = new JLabel("You haven't created a team yet");
-    teamDisplayLabel.setHorizontalAlignment(SwingConstants.CENTER);
-
     // create a TextArea to display team info
     teamInfoArea = new JTextArea();
     teamInfoArea.setEditable(false);
     teamInfoArea.setLineWrap(true);
     teamInfoArea.setWrapStyleWord(true);
 
+    // create another panel to display team information
     // add label and info area to the teamLayoutPanel
-    teamLayoutPanel.add(teamDisplayLabel, BorderLayout.NORTH);
+    JPanel teamLayoutPanel = new JPanel(new BorderLayout());
     teamLayoutPanel.add(teamInfoArea, BorderLayout.CENTER);
-
-    displayTeamPanel.add(teamLayoutPanel);
 
     createTeamButton = new JButton("Create_Team");
     displayTeamButton = new JButton("Display_Team");
     displayLineUpButton = new JButton("Display_LineUp");
     displayBenchButton = new JButton("Display_Bench");
 
-    // Set up action listeners for Display_Team, Display_LineUp, and Back buttons in displayPanel
+    // create displayPanel at the top
+    JPanel displayTeamPanel = new JPanel(new BorderLayout());
+    JPanel displayTeamButtonsPanel = new JPanel(new GridLayout(1, 4));
+    displayTeamPanel.add(teamLayoutPanel);
+    teamDisplayLabel = new JLabel("You haven't created a team yet");
+    teamLayoutPanel.add(teamDisplayLabel, BorderLayout.NORTH);
+    teamDisplayLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
+    // Set up action listeners for Display_Team, Display_LineUp, and Back buttons in displayPanel
     displayTeamButtonsPanel.add(createTeamButton);
+    displayTeamPanel.add(displayTeamButtonsPanel, BorderLayout.SOUTH);
     displayTeamButtonsPanel.add(displayTeamButton);
     displayTeamButtonsPanel.add(displayLineUpButton);
     displayTeamButtonsPanel.add(displayBenchButton);
-
-    displayTeamPanel.add(displayTeamButtonsPanel, BorderLayout.SOUTH);
 
     JButton addPlayersButton = new JButton("Go to add players");
     JButton displayButton = new JButton("Go to display the team");
