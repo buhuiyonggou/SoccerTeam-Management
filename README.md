@@ -1,4 +1,4 @@
-# CS5004-U10_Soccer_Team
+# Soccer_Team
 
 ## About/Overview
 - The Soccer Team Manager program allows users to manage an under-10 soccer team by adding player information, creating the team, and displaying the team lineup, bench players, and the full team roster. The program ensures that players are added to the team based on their age, preferred position, and skill level.
